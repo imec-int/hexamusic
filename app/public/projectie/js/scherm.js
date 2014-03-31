@@ -90,7 +90,23 @@ function initSockets () {
 
   socket.on('twitter', function(data){
     console.log(data.msg);
-    u.getUnity().SendMessage("MAINSCRIPT", "SetTag", data.msg.tag);
+    var twtext = data.msg.tag.split(" ");
+    var splittext = "";
+
+    function splitText(text){
+      var length = 0;
+      for(var i = 0; i < text.length; i++){
+        length += text[i].length //add word length
+        splittext += ( twtext[i] + " " );
+        if(length > 20){
+          splittext += "\n";
+          length = 0;
+        }
+      }
+    }
+
+    splitText(twtext);
+    u.getUnity().SendMessage("MAINSCRIPT", "SetTag", splittext);
     u.getUnity().SendMessage("MAINSCRIPT", "SetTagValue", data.msg.count);
   });
 
