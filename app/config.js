@@ -10,6 +10,6 @@ exports.twitter = {
 exports.app = {
 	//searchterms: ["#apple","#google", "#twitter", "#tetten"],
 	// searchterms: ["#awesome","#porn","#selfie","#music","#vacation","#party","#work","#retweet"],
-	searchterms: ["#mh370", "#iminds","@mixbe","#2jaarmix"],
+	searchterms: ["#iminds","#mixbe","#2jaarmix"],
 	maximumpictures: 2000
 }
