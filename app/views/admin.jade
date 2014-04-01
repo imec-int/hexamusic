@@ -10,13 +10,10 @@ html
 		script(src='/socket.io/socket.io.js')
 		script(type='text/javascript', src='/vendor/jquery.min.js')
 		script(type='text/javascript', src='/vendor/jquery.tmpl.min.js')
-		script(type='text/javascript', src='/javascripts/index.js')
+		script(type='text/javascript', src='/javascripts/admin.js')
 	body
-		.choicebox
-			a.choice(href="/projectie/scherm.html") I'm the projection screen
-			br
-			a.choice(href="/smartphone/index2.html") I'm a smartphone
-			br
-			a.choice(href="/leapmotion/index.html") I'm the Leap Motion
-			br
-			a.choice(href="/admin") I'm the admin
+		h1 hexamusic
+		button.colorbutton(style="background-color: #f1ff87", data-hackevent="hm1") Groenachtig iets
+		button.colorbutton(style="background-color: #fb87ff", data-hackevent="hm2") Donkderblauw
+		button.colorbutton(style="background-color: #ff0000", data-hackevent="hm3") Ander kleur 1
+		button.colorbutton(style="background-color: #0000ff", data-hackevent="hm3") Ander kleur 2

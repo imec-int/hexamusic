@@ -39,6 +39,10 @@ app.get('/', function (req, res){
 	res.render('index', { title: 'Hexamusic' });
 });
 
+app.get('/admin', function (req, res){
+	res.render('admin', { title: 'Hexamusic | Admin' });
+});
+
 app.get('/boe', function (req, res){
 
 	console.log( req.query.test );
