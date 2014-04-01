@@ -125,9 +125,13 @@ io.sockets.on('connection', function (socket) {
 });
 
 setInterval(makeAdmin,(20*1000));
+makeAdmin();
 
 function makeAdmin()
 {
+	if(io.sockets.clients('app').length == 0)
+		return console.log('> no smartphones connected. No one can be admin.');
+
 	var rid = Math.floor((Math.random()*io.sockets.clients('app').length));
 
 	console.log('> ' + io.sockets.clients('app').length + ' smartphones connected. Will make smartphone[' + rid + '] admin.');
