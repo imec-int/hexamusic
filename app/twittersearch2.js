@@ -57,7 +57,7 @@ function startSearchHose(){
 			try{
 				var tweet = JSON.parse(chunk);
 				if(tweetsBuffer.indexOf(tweet) < 0)
-					tweetsBuffer[currentIndex] = tweet.text;
+					tweetsBuffer.splice(currentIndex, 0, tweet.text);
 			}catch(err){}
 		});
 
